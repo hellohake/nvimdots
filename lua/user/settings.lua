@@ -9,7 +9,7 @@ settings["colorscheme"] = "elflord"
 ---@type table<string, boolean>
 settings["formatter_block_list"] = {
 	lua = false, -- example
-	thrift = true,
+	thrift = false,
 }
 
 return settings

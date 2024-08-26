@@ -9,6 +9,8 @@ return {
 	["n|j"] = map_cmd("jzz"):with_noremap():with_silent():with_desc("moving"),
 	["n|k"] = map_cmd("kzz"):with_noremap():with_silent():with_desc("moving"),
 
-	["n|J"] = map_cmd("5jzz"):with_noremap():with_silent(),
-	["n|K"] = map_cmd("5kzz"):with_noremap():with_silent(),
+	["n|J"] = map_cmd("8jzz"):with_noremap():with_silent(),
+	["n|K"] = map_cmd("8kzz"):with_noremap():with_silent(),
+	["n|<Leader>gi"] = map_cr("GoImplements"):with_noremap():with_silent():with_desc("GoImplements"),
+	["n|<Leader>bo"] = map_cr("BufDelOthers"):with_noremap():with_silent():with_desc("BufDelOthers"),
 }
