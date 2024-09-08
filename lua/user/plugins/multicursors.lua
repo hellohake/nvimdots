@@ -19,7 +19,7 @@ custom["brenton-leighton/multiple-cursors.nvim"] = {
 		},
 
 		{ "<Leader>a", "<Cmd>MultipleCursorsAddMatches<CR>", mode = { "n", "x" }, desc = "Add cursors to cword" },
-		{ "<Leader>m", "<Cmd>MultipleCursorsAddDown<CR>", mode = { "n", "x" }, desc = "Add cursors to cword" },
+		{ "<Leader>m", "<Cmd>MultipleCursorsAddDown<CR>", mode = { "n", "x" }, desc = "Add cursor and move down" },
 		{
 			"<Leader>A",
 			"<Cmd>MultipleCursorsAddMatchesV<CR>",
