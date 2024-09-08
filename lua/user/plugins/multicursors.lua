@@ -2,6 +2,7 @@ local custom = {}
 
 custom["brenton-leighton/multiple-cursors.nvim"] = {
 	"brenton-leighton/multiple-cursors.nvim",
+	lazy = false,
 	version = "*", -- Use the latest tagged version
 	opts = {}, -- This causes the plugin setup function to be called
 	keys = {
