@@ -90,30 +90,30 @@ tool["nvim-telescope/telescope.nvim"] = {
 ----------------------------------------------------------------------
 --                           DAP Plugins                            --
 ----------------------------------------------------------------------
-tool["mfussenegger/nvim-dap"] = {
-	lazy = true,
-	cmd = {
-		"DapSetLogLevel",
-		"DapShowLog",
-		"DapContinue",
-		"DapToggleBreakpoint",
-		"DapToggleRepl",
-		"DapStepOver",
-		"DapStepInto",
-		"DapStepOut",
-		"DapTerminate",
-	},
-	config = require("tool.dap"),
-	dependencies = {
-		{
-			"rcarriga/nvim-dap-ui",
-			config = require("tool.dap.dapui"),
-			dependencies = {
-				"nvim-neotest/nvim-nio",
-			},
-		},
-		{ "jay-babu/mason-nvim-dap.nvim" },
-	},
-}
+--tool["mfussenegger/nvim-dap"] = {
+--	lazy = true,
+--	cmd = {
+--		"DapSetLogLevel",
+--		"DapShowLog",
+--		"DapContinue",
+--		"DapToggleBreakpoint",
+--		"DapToggleRepl",
+--		"DapStepOver",
+--		"DapStepInto",
+--		"DapStepOut",
+--		"DapTerminate",
+--	},
+--	config = require("tool.dap"),
+--	dependencies = {
+--		{
+--			"rcarriga/nvim-dap-ui",
+--			config = require("tool.dap.dapui"),
+--			dependencies = {
+--				"nvim-neotest/nvim-nio",
+--			},
+--		},
+--		{ "jay-babu/mason-nvim-dap.nvim" },
+--	},
+--}
 
 return tool

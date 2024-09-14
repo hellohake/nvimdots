@@ -85,6 +85,7 @@ settings["external_browser"] = "chrome-cli open"
 ---@type table<string, boolean>
 settings["formatter_block_list"] = {
 	lua = false, -- example
+	thrift = false,
 }
 
 -- Servers in this list will skip setting formatting capabilities if rhs is true.
@@ -105,7 +106,6 @@ settings["lsp_deps"] = {
 	"html",
 	"jsonls",
 	"lua_ls",
-	"pylsp",
 	"gopls",
 }
 
@@ -115,7 +115,6 @@ settings["lsp_deps"] = {
 -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins
 ---@type string[]
 settings["null_ls_deps"] = {
-	"clang_format",
 	"gofumpt",
 	"goimports",
 	"prettier",
