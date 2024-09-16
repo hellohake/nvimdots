@@ -24,20 +24,17 @@ custom["theHamsta/nvim-dap-virtual-text"] = {
 		"mfussenegger/nvim-dap",
 	},
 	init = function()
-		require("nvim-dap-virtual-text").setup()
+		require("nvim-dap-virtual-text").setup({
+			enabled = true,
+			enabled_commands = true,
+			highlight_changed_variables = true,
+			highlight_new_as_changed = true,
+			virt_text_pos = "eol",
+			all_frames = true,
+			commented = true,
+		})
 		-- Enable virtual text
 		vim.g.dap_virtual_text = true
-	end,
-	config = function()
-		--require("nvim-dap-virtual-text").setup({
-		--	enabled = true,
-		--	enabled_commands = true,
-		--	highlight_changed_variables = true,
-		--	highlight_new_as_changed = true,
-		--	virt_text_pos = "eol",
-		--	all_frames = true,
-		--	commented = true,
-		--})
 	end,
 }
 custom["nvim-telescope/telescope-dap.nvim"] = {
