@@ -68,7 +68,7 @@ custom["mfussenegger/nvim-dap"] = {
 			desc = "debug",
 		},
 		{
-			"<F10>",
+			"<F12>",
 			function()
 				require("dap").step_over()
 			end,
@@ -76,7 +76,7 @@ custom["mfussenegger/nvim-dap"] = {
 			desc = "debug",
 		},
 		{
-			"<F11>",
+			"<F10>",
 			function()
 				require("dap").step_into()
 			end,
@@ -84,7 +84,7 @@ custom["mfussenegger/nvim-dap"] = {
 			desc = "debug",
 		},
 		{
-			"<F12>",
+			"<F11>",
 			function()
 				require("dap").step_out()
 			end,
