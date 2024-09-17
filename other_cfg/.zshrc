@@ -41,7 +41,7 @@ ZSH_THEME="af-magic"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -104,7 +104,6 @@ export PATH=$PATH:/opt/tiger/toutiao/lib:/opt/tiger/jdk/jdk1.8/bin:/usr/local/sb
 
 
 alias vim='nvim'
-alias vi='nvim'
 
 #source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -112,7 +111,9 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export http_proxy=http://sys-proxy-rd-relay.byted.org:8118  https_proxy=http://sys-proxy-rd-relay.byted.org:8118  no_proxy=*.byted.org
 
-export PATH="$PATH:/home/lihao.hellohake/github_repo/nvim-linux64/bin"
+export PATH="$PATH:/home/lihao.hellohake/github_repo/nvim-linux64-0.9.5/bin"
+#nvim10需要glibc2.29
+#export PATH="$PATH:/home/lihao.hellohake/github_repo/nvim-linux64-0.10.0/bin"
 
 #go配置
 export PATH="$PATH:/usr/local/go/bin:/home/lihao.hellohake/go/bin"
@@ -120,7 +121,7 @@ export GOPATH=$HOME/go
 
 export TMUX_TMPDIR=~/.tmux/tmp
 
-export PATH="$PATH:/home/lihao.hellohake/node_modules/tree-sitter-cli"
+#export PATH="$PATH:/home/lihao.hellohake/node_modules/tree-sitter-cli"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
