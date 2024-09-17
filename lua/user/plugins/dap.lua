@@ -13,7 +13,6 @@ custom["leoluz/nvim-dap-go"] = {
 custom["rcarriga/nvim-dap-ui"] = {
 	"rcarriga/nvim-dap-ui",
 	dependencies = {
-		"mfussenegger/nvim-dap",
 		"nvim-neotest/nvim-nio",
 	},
 }
@@ -30,11 +29,8 @@ custom["theHamsta/nvim-dap-virtual-text"] = {
 			highlight_changed_variables = true,
 			highlight_new_as_changed = true,
 			virt_text_pos = "eol",
-			all_frames = true,
 			commented = true,
 		})
-		-- Enable virtual text
-		vim.g.dap_virtual_text = true
 	end,
 }
 custom["nvim-telescope/telescope-dap.nvim"] = {
@@ -48,7 +44,6 @@ custom["mfussenegger/nvim-dap"] = {
 	"mfussenegger/nvim-dap",
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
-		"theHamsta/nvim-dap-virtual-text",
 	},
 	keys = {
 		{
