@@ -107,6 +107,7 @@ settings["lsp_deps"] = {
 	"jsonls",
 	"lua_ls",
 	"gopls",
+	"thriftls",
 }
 
 -- Set the general-purpose servers that will be installed during bootstrap here.
