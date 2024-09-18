@@ -42,7 +42,7 @@ function mapping.lsp(buf)
 			:with_silent()
 			:with_buffer(buf)
 			:with_desc("lsp: Rename in project range"),
-		-- ["n|K"] = map_cr("Lspsaga hover_doc"):with_silent():with_buffer(buf):with_desc("lsp: Show doc"),
+		["n|<leader>K"] = map_cr("Lspsaga hover_doc"):with_silent():with_buffer(buf):with_desc("lsp: Show doc"),
 		["nv|ga"] = map_cr("Lspsaga code_action")
 			:with_silent()
 			:with_buffer(buf)

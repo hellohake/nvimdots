@@ -21,6 +21,7 @@ custom["theHamsta/nvim-dap-virtual-text"] = {
 	"theHamsta/nvim-dap-virtual-text",
 	dependencies = {
 		"mfussenegger/nvim-dap",
+		"nvim-treesitter/nvim-treesitter",
 	},
 	init = function()
 		require("nvim-dap-virtual-text").setup({
