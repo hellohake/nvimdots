@@ -23,14 +23,14 @@ custom["theHamsta/nvim-dap-virtual-text"] = {
 		"mfussenegger/nvim-dap",
 		"nvim-treesitter/nvim-treesitter",
 	},
-	init = function()
+	config = function()
 		require("nvim-dap-virtual-text").setup({
 			enabled = true,
 			enabled_commands = true,
 			highlight_changed_variables = true,
 			highlight_new_as_changed = true,
 			virt_text_pos = "eol",
-			commented = true,
+			commented = false,
 		})
 	end,
 }
