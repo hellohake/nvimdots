@@ -6,19 +6,34 @@ custom["leoluz/nvim-dap-go"] = {
 		"mfussenegger/nvim-dap",
 	},
 	config = function()
-		require("dap-go").setup({})
+		require("dap-go").setup({
+			-- dap_configurations = {
+			-- 	{
+			-- 		type = "go",
+			-- 		request = "attach",
+			-- 		mode = "local",
+			-- 		name = "hello attach mode",
+			-- 		processId = require("dap.utils").pick_process,
+			-- 		showLog = true,
+			-- 		trace = "trace",
+			-- 		cwd = "${workspaceFolder}",
+			-- 	},
+			-- },
+		})
 	end,
 }
 
 custom["rcarriga/nvim-dap-ui"] = {
 	"rcarriga/nvim-dap-ui",
 	dependencies = {
+		"mfussenegger/nvim-dap",
 		"nvim-neotest/nvim-nio",
 	},
 }
 
 custom["theHamsta/nvim-dap-virtual-text"] = {
 	"theHamsta/nvim-dap-virtual-text",
+	commit = "9578276",
 	dependencies = {
 		"mfussenegger/nvim-dap",
 		"nvim-treesitter/nvim-treesitter",
@@ -38,11 +53,13 @@ custom["nvim-telescope/telescope-dap.nvim"] = {
 	"nvim-telescope/telescope-dap.nvim",
 	dependencies = {
 		"mfussenegger/nvim-dap",
+		"nvim-treesitter/nvim-treesitter",
 	},
 }
 
 custom["mfussenegger/nvim-dap"] = {
 	"mfussenegger/nvim-dap",
+	version = "0.7.0",
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
 	},
@@ -67,6 +84,14 @@ custom["mfussenegger/nvim-dap"] = {
 			"<F12>",
 			function()
 				require("dap").step_over()
+			end,
+			mode = { "n" },
+			desc = "debug",
+		},
+		{
+			"F9",
+			function()
+				require("dap").continue()
 			end,
 			mode = { "n" },
 			desc = "debug",
@@ -119,6 +144,19 @@ custom["mfussenegger/nvim-dap"] = {
 		dap.listeners.before.event_exited.dapui_config = function()
 			dapui.close()
 		end
+		dap.configurations.go = {
+			{
+				type = "go",
+				request = "attach",
+				mode = "local",
+				name = "hello attach mode",
+				processId = require("dap.utils").pick_process,
+				showLog = true,
+				trace = "trace",
+				cwd = "${workspaceFolder}",
+			},
+		}
+
 		local icons = { dap = require("modules.utils.icons").get("dap") }
 		-- We need to override nvim-dap's default highlight groups, AFTER requiring nvim-dap for catppuccin.
 		vim.api.nvim_set_hl(0, "DapStopped", { fg = "#AFD700" })
