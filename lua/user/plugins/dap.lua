@@ -89,7 +89,7 @@ custom["mfussenegger/nvim-dap"] = {
 			desc = "debug",
 		},
 		{
-			"F9",
+			"<F9>",
 			function()
 				require("dap").continue()
 			end,
