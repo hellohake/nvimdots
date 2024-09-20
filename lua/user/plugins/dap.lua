@@ -6,20 +6,7 @@ custom["leoluz/nvim-dap-go"] = {
 		"mfussenegger/nvim-dap",
 	},
 	config = function()
-		require("dap-go").setup({
-			-- dap_configurations = {
-			-- 	{
-			-- 		type = "go",
-			-- 		request = "attach",
-			-- 		mode = "local",
-			-- 		name = "hello attach mode",
-			-- 		processId = require("dap.utils").pick_process,
-			-- 		showLog = true,
-			-- 		trace = "trace",
-			-- 		cwd = "${workspaceFolder}",
-			-- 	},
-			-- },
-		})
+		require("dap-go").setup({})
 	end,
 }
 
