@@ -122,6 +122,8 @@ settings["null_ls_deps"] = {
 	"shfmt",
 	"stylua",
 	"vint",
+	"gofmt",
+	"golines",
 }
 
 -- Set the Debug Adapter Protocol (DAP) clients that will be installed and configured during bootstrap here.
@@ -149,7 +151,6 @@ settings["treesitter_deps"] = {
 	"javascript",
 	"json",
 	"jsonc",
-	-- "latex",
 	"lua",
 	"make",
 	"markdown",
