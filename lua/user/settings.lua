@@ -1,8 +1,5 @@
 local settings = {}
 
--- Examples
-settings["use_ssh"] = false
-
 settings["colorscheme"] = "elflord"
 
 -- Filetypes in this list will skip lsp formatting if rhs is true.
