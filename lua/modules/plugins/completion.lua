@@ -34,6 +34,9 @@ completion["dnlhc/glance.nvim"] = {
 completion["joechrisellis/lsp-format-modifications.nvim"] = {
 	lazy = true,
 	event = "LspAttach",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
 }
 completion["nvimtools/none-ls.nvim"] = {
 	lazy = true,

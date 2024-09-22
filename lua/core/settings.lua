@@ -14,7 +14,7 @@ settings["format_on_save"] = true
 
 -- Set it to false if the notification after formatting is annoying.
 ---@type boolean
-settings["format_notify"] = true
+settings["format_notify"] = false
 
 -- Set it to true if you prefer formatting ONLY the *changed lines* as defined by your version control system.
 -- NOTE: This entry will only be respected if:
@@ -122,8 +122,6 @@ settings["null_ls_deps"] = {
 	"shfmt",
 	"stylua",
 	"vint",
-	"gofmt",
-	"golines",
 }
 
 -- Set the Debug Adapter Protocol (DAP) clients that will be installed and configured during bootstrap here.
