@@ -135,14 +135,6 @@ function M.format(opts)
 		return client.supports_method("textDocument/formatting")
 	end, clients)
 
-	if #clients == 0 then
-		vim.notify(
-			"[LSP] Format request failed, no matching language servers.",
-			vim.log.levels.WARN,
-			{ title = "Formatting Failed" }
-		)
-	end
-
 	local timeout_ms = opts.timeout_ms
 	for _, client in pairs(clients) do
 		if block_list[vim.bo.filetype] == true then

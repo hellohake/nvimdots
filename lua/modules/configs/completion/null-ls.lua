@@ -38,12 +38,19 @@ return function()
 		btns.formatting.gofumpt,
 		btns.formatting.goimports,
 	}
+	local on_attach = function(client, bufnr)
+		client.server_capabilities.document_formatting = false
+		client.server_capabilities.document_range_formatting = false
+		local lsp_format_modifications = require("lsp-format-modifications")
+		lsp_format_modifications.attach(client, bufnr, { format_on_save = true })
+	end
 	require("modules.utils").load_plugin("null-ls", {
 		border = "rounded",
 		debug = false,
 		log_level = "warn",
 		update_in_insert = false,
 		sources = sources,
+		on_attach = on_attach,
 	})
 
 	require("completion.mason-null-ls").setup()
