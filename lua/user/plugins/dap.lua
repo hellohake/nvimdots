@@ -57,7 +57,7 @@ custom["mfussenegger/nvim-dap"] = {
 				require("telescope").extensions.dap.configurations()
 			end,
 			mode = { "n" },
-			desc = "debug",
+			desc = "debug configuration",
 		},
 		{
 			"<F6>",
@@ -65,7 +65,7 @@ custom["mfussenegger/nvim-dap"] = {
 				require("dap").terminate()
 			end,
 			mode = { "n" },
-			desc = "debug",
+			desc = "debug terminate",
 		},
 		{
 			"<F12>",
@@ -73,7 +73,7 @@ custom["mfussenegger/nvim-dap"] = {
 				require("dap").step_over()
 			end,
 			mode = { "n" },
-			desc = "debug",
+			desc = "debug step over",
 		},
 		{
 			"<F9>",
@@ -81,7 +81,7 @@ custom["mfussenegger/nvim-dap"] = {
 				require("dap").continue()
 			end,
 			mode = { "n" },
-			desc = "debug",
+			desc = "debug continue",
 		},
 		{
 			"<F10>",
@@ -89,7 +89,7 @@ custom["mfussenegger/nvim-dap"] = {
 				require("dap").step_into()
 			end,
 			mode = { "n" },
-			desc = "debug",
+			desc = "debug step into",
 		},
 		{
 			"<F11>",
@@ -97,7 +97,7 @@ custom["mfussenegger/nvim-dap"] = {
 				require("dap").step_out()
 			end,
 			mode = { "n" },
-			desc = "debug",
+			desc = "debug step out",
 		},
 		{
 			"<Leader>db",
@@ -105,7 +105,7 @@ custom["mfussenegger/nvim-dap"] = {
 				require("dap").toggle_breakpoint()
 			end,
 			mode = { "n" },
-			desc = "debug",
+			desc = "debug toggle breakpoint",
 		},
 		{
 			"<Leader>dl",
@@ -113,7 +113,7 @@ custom["mfussenegger/nvim-dap"] = {
 				require("dap").run_last()
 			end,
 			mode = { "n" },
-			desc = "debug",
+			desc = "debug run last",
 		},
 	},
 	config = function()
