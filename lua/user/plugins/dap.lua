@@ -57,7 +57,7 @@ custom["mfussenegger/nvim-dap"] = {
 				require("telescope").extensions.dap.configurations()
 			end,
 			mode = { "n" },
-			desc = "debug configuration",
+			desc = "debug configuration telescope",
 		},
 		{
 			"<F6>",
@@ -114,6 +114,22 @@ custom["mfussenegger/nvim-dap"] = {
 			end,
 			mode = { "n" },
 			desc = "debug run last",
+		},
+		{
+			"<Leader>do",
+			function()
+	require("dap").repl.open()
+			end,
+			mode = { "n" },
+			desc = "debug open repl",
+		},
+		{
+			"<Leader>dc",
+			function()
+	require("dap").run_to_cursor()
+			end,
+			mode = { "n" },
+			desc = "debug run to cursor",
 		},
 	},
 	config = function()
