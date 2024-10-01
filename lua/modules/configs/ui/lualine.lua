@@ -307,6 +307,10 @@ return function()
 					},
 				},
 				components.lsp,
+				{
+					"filename",
+					path = 0, -- 0 = just filename, 1 = relative path, 2 = absolute path
+				},
 			},
 			lualine_x = {
 				{
@@ -336,7 +340,7 @@ return function()
 		inactive_sections = {
 			lualine_a = {},
 			lualine_b = {},
-			lualine_c = { "filename" },
+			lualine_c = { "filename", path = 0 },
 			lualine_x = { "location" },
 			lualine_y = {},
 			lualine_z = {},
