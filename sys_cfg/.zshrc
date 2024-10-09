@@ -70,7 +70,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-interactive-cd copypath z fzf colorize jsontools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,6 +108,7 @@ alias vim='nvim'
 #source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /home/lihao.hellohake/github_repo/zsh_plugin/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 
 export http_proxy=http://sys-proxy-rd-relay.byted.org:8118  https_proxy=http://sys-proxy-rd-relay.byted.org:8118  no_proxy=*.byted.org
 
@@ -126,8 +127,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
+# https://bytedance.larkoffice.com/wiki/wikcn9pPaYLxtsxY29OLzY4RgUg
+[ -f "$HOME/.bytebm/config/config.sh" ] && . "$HOME/.bytebm/config/config.sh"
+
 . /usr/share/autojump/autojump.sh
 export no_proxy=.byteintl.net,.byted.org,.bytedance.net
 
 export RUNTIME_IDC_NAME=boe
 export BYTED_HOST_IPV6=1
+
+
