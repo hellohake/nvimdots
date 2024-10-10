@@ -118,7 +118,7 @@ custom["mfussenegger/nvim-dap"] = {
 		{
 			"<Leader>do",
 			function()
-	require("dap").repl.open()
+				require("dap").repl.open()
 			end,
 			mode = { "n" },
 			desc = "debug open repl",
@@ -126,7 +126,7 @@ custom["mfussenegger/nvim-dap"] = {
 		{
 			"<Leader>dc",
 			function()
-	require("dap").run_to_cursor()
+				require("dap").run_to_cursor()
 			end,
 			mode = { "n" },
 			desc = "debug run to cursor",
@@ -134,7 +134,7 @@ custom["mfussenegger/nvim-dap"] = {
 	},
 	config = function()
 		local dap, dapui = require("dap"), require("dapui")
-	dapui.setup(require("user.configs.dapui"))
+		dapui.setup(require("user.configs.dapui"))
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
 		end
