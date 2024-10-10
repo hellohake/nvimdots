@@ -1,6 +1,7 @@
 local M = {}
 
 M.setup = function()
+	require("neodev").setup({})
 	local diagnostics_virtual_text = require("core.settings").diagnostics_virtual_text
 	local diagnostics_level = require("core.settings").diagnostics_level
 

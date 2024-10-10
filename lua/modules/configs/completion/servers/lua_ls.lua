@@ -14,6 +14,9 @@ return {
 				maxPreload = 100000,
 				preloadFileSize = 10000,
 			},
+			completion = {
+				callSnippet = "Replace",
+			},
 			format = { enable = false },
 			telemetry = { enable = false },
 			-- Do not override treesitter lua highlighting with lua_ls's highlighting
