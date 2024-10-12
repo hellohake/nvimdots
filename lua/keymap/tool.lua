@@ -10,7 +10,12 @@ local plug_map = {
 	["n|gps"] = map_cr("G push"):with_noremap():with_silent():with_desc("git: Push"),
 	["n|gpl"] = map_cr("G pull"):with_noremap():with_silent():with_desc("git: Pull"),
 	["n|<leader>gG"] = map_cu("Git"):with_noremap():with_silent():with_desc("git: Open git-fugitive"),
-
+	["n|<leader>gcm"] = map_callback(function()
+			require("telescope").extensions.git_file_history.git_file_history({})
+		end)
+		:with_noremap()
+		:with_silent()
+		:with_desc("git commit history"),
 	-- Plugin: nvim-tree
 	["n|<C-n>"] = map_cr("NvimTreeToggle"):with_noremap():with_silent():with_desc("filetree: Toggle"),
 	["n|<leader>nf"] = map_cr("NvimTreeFindFile"):with_noremap():with_silent():with_desc("filetree: Find file"),
@@ -134,68 +139,6 @@ local plug_map = {
 		:with_silent()
 		:with_desc("find: Selection text"),
 	["n|<leader>fd"] = map_cu("Telescope persisted"):with_noremap():with_silent():with_desc("find: Session"),
-
-	-- Plugin: dap
-	--["n|<F6>"] = map_callback(function()
-	--		require("dap").continue()
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Run/Continue"),
-	--["n|<F7>"] = map_callback(function()
-	--		require("dap").terminate()
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Stop"),
-	--["n|<F8>"] = map_callback(function()
-	--		require("dap").toggle_breakpoint()
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Toggle breakpoint"),
-	--["n|<F9>"] = map_callback(function()
-	--		require("dap").step_into()
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Step into"),
-	--["n|<F10>"] = map_callback(function()
-	--		require("dap").step_out()
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Step out"),
-	--["n|<F11>"] = map_callback(function()
-	--		require("dap").step_over()
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Step over"),
-	--["n|<leader>db"] = map_callback(function()
-	--		require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Set breakpoint with condition"),
-	--["n|<leader>dc"] = map_callback(function()
-	--		require("dap").run_to_cursor()
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Run to cursor"),
-	--["n|<leader>dl"] = map_callback(function()
-	--		require("dap").run_last()
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Run last"),
-	--["n|<leader>do"] = map_callback(function()
-	--		require("dap").repl.open()
-	--	end)
-	--	:with_noremap()
-	--	:with_silent()
-	--	:with_desc("debug: Open REPL"),
 }
 
 bind.nvim_load_mapping(plug_map)
