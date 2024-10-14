@@ -94,6 +94,7 @@ tool["nvim-telescope/telescope.nvim"] = {
 				"tpope/vim-fugitive",
 			},
 		},
+		{ "gbrlsnchs/telescope-lsp-handlers.nvim" },
 	},
 }
 
