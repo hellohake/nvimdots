@@ -53,8 +53,8 @@ function mapping.lsp(buf)
 			:with_silent()
 			:with_buffer(buf)
 			:with_desc("lsp: Show implementation"),
-		-- ["n|gh"] = map_cr("Glance references"):with_silent():with_buffer(buf):with_desc("lsp: Show reference"),
-		["n|gh"] = map_cr("Telescope lsp_references"):with_silent():with_buffer(buf):with_desc("lsp: Show reference"),
+		["n|gh"] = map_cr("Glance references"):with_silent():with_buffer(buf):with_desc("lsp: Show reference"),
+		-- ["n|gh"] = map_cr("Telescope lsp_references"):with_silent():with_buffer(buf):with_desc("lsp: Show reference"),
 		["n|gci"] = map_cr("Lspsaga incoming_calls")
 			:with_silent()
 			:with_buffer(buf)
